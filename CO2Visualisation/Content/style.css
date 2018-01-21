@@ -1,0 +1,51 @@
+﻿.navigation nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+li a{
+    display: block;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+p, div>a{
+    text-align:center;
+    display: block;
+}
+
+progress {
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    height: 2em;
+    width: 30em;
+    -webkit-appearance: none;
+}
+
+.progressChromeGreen::-webkit-progress-value {
+    background-color: green;
+}
+
+.progressChromeYellow::-webkit-progress-value {
+    background-color: yellow;
+}
+
+.progressChromeRed::-webkit-progress-value {
+    background-color: red;
+}

@@ -1,0 +1,35 @@
+﻿@using System.Web.Optimization
+@model CO2ClassLib.CO2Sensor
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CO2 Visualisation</title>
+    @Styles.Render("~/styles")
+</head>
+<body>
+    <header class="navigation">
+        <nav>
+            <ul>
+                <li>
+                    <a href="@Url.Action("Index")">CO2 Visualisation</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <p>The amount of CO2 is <span class="co2-amount">@Model.value</span> pm</p>
+        <progress id="progressbar" value="@Model.value" min="0" max="5000"/>
+    </div>
+    <div>
+        <a href="https://github.com/ismailousa/CO2-Visualisation">Check Source Code</a>
+    </div>
+    @Scripts.Render("~/scripts")
+</body>
+</html>
